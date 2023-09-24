@@ -1,8 +1,11 @@
 import csv
 
+# Solicitar al usuario la ruta del archivo CSV
+ruta_archivo = input("Introduce la ruta del archivo CSV: ")
+
 try:
     # Abrir el archivo CSV en modo lectura
-    with open('data.csv') as File:
+    with open(ruta_archivo) as File:
         # Crear un objeto lector de CSV
         reader = csv.DictReader(File)
         
