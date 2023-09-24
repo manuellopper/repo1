@@ -1,13 +1,18 @@
 import csv
 
-with open('data.csv') as File:
-    reader = csv.reader(File)
-    for row in reader:
-        print(row)
+try:
+    # Abrir el archivo CSV en modo lectura
+    with open('data.csv') as File:
+        # Crear un objeto lector de CSV
+        reader = csv.DictReader(File)
+        
+        # Iterar sobre cada fila del archivo CSV
+        for row in reader:
+            # Imprimir los valores de las columnas "nombre" y "edad"
+            print(row['nombre'], row['edad'])
 
-import csv
+except FileNotFoundError:
+    print("El archivo no existe.")
 
-with open('data.csv') as File:
-    reader = csv.DictReader(File)
-    for row in reader:
-        print(row['nombre'], row['edad'])
+except csv.Error:
+    print("Error al procesar el archivo CSV.")
