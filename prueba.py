@@ -1,4 +1,3 @@
-
 def prime_factors(n):
     i = 2
     factors = []
@@ -15,3 +14,9 @@ def prime_factors(n):
 
 num = int(input("Enter a number: "))
 print("Prime factors are: ", prime_factors(num))
+
+satisfaction = input("Are you satisfied with the result? (yes/no): ")
+if satisfaction.lower() == 'yes':
+    print("Great! We're happy to help.")
+else:
+    print("We're sorry to hear that. We'll try to improve.")
