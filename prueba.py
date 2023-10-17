@@ -1,4 +1,3 @@
-
 def prime_factors(n):
     i = 2
     factors = []
@@ -13,5 +12,7 @@ def prime_factors(n):
         factors.append(n)
     return factors
 
+name = input("Enter your name: ")
+surname = input("Enter your surname: ")
 num = int(input("Enter a number: "))
 print("Prime factors are: ", prime_factors(num))
